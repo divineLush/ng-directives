@@ -24,4 +24,20 @@
   <p appDynamicHover [defaultColor]="'fuchsia'" [highlightColor]="'greenyellow'">style me with dynamic hover directive and given values</p>
   <!-- shortcut -->
   <p appDynamicHover defaultColor="greenyellow" highlightColor="fuchsia">style me with dynamic hover directive and given values</p>
+  <!-- Structural directives manipulate DOM and start with *. Why * is required?
+       Why does Angular need to know that it's a structural directive?
+       Behind the scenes Angular will transform them into something else. -->
+  <!-- This is what the * transforms to: -->
+  <ul>
+    <li *ngFor="let number of numbers">
+      <ng-template [ngIf]="onlyOdd ? number % 2 !== 0 : true">
+        <span
+          [ngClass]="{ odd: number % 2 !== 0 }"
+          [ngStyle]="{ background: number % 2 === 0 ? 'red' : 'blue' }"
+        >
+          {{ number }}
+        </span>
+      </ng-template>
+    </li>
+  </ul>
 </div>
