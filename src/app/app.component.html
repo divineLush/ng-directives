@@ -20,4 +20,8 @@
   <p appBetterHighlight>style me with better directive</p>
   <p appHoverHighlight>style me with hover directive</p>
   <p appBetterHover>style me with better hover directive</p>
+  <p appDynamicHover>style me with dynamic hover directive and default values</p>
+  <p appDynamicHover [defaultColor]="'fuchsia'" [highlightColor]="'greenyellow'">style me with dynamic hover directive and given values</p>
+  <!-- shortcut -->
+  <p appDynamicHover defaultColor="greenyellow" highlightColor="fuchsia">style me with dynamic hover directive and given values</p>
 </div>
