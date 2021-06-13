@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import BasicHighLightDirective from '../app/basic-highlight/basic-highlight.directive';
 import BetterHighLightDirective from '../app/better-highlight/better-highlight.directive';
 import HoverHighLightDirective from '../app/hover-highlight/hover-highlight.directive';
+import BetterHoverHighlightDirective from '../app/better-hover/better-hover.directive';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import HoverHighLightDirective from '../app/hover-highlight/hover-highlight.dire
     BasicHighLightDirective,
     BetterHighLightDirective,
     HoverHighLightDirective,
+    BetterHoverHighlightDirective,
   ],
   imports: [
     BrowserModule
