@@ -7,6 +7,7 @@ import BetterHighLightDirective from '../app/better-highlight/better-highlight.d
 import HoverHighLightDirective from '../app/hover-highlight/hover-highlight.directive';
 import BetterHoverHighlightDirective from '../app/better-hover/better-hover.directive';
 import DynamicHoverHighlightDirective from '../app/dynamic-hover/dynamic-hover.directive';
+import UnlessDirective from '../app/unless/unless.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import DynamicHoverHighlightDirective from '../app/dynamic-hover/dynamic-hover.d
     HoverHighLightDirective,
     BetterHoverHighlightDirective,
     DynamicHoverHighlightDirective,
+    UnlessDirective,
   ],
   imports: [
     BrowserModule

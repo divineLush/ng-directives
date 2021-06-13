@@ -4,17 +4,36 @@ p {
 
 button {
   padding: 1rem;
-  border: 0;
   color: #fff;
-  background: fuchsia;
+  border: 0;
+  background: limegreen;
   cursor: pointer;
   font-size: 3rem;
+  animation: bg 3.5s infinite ease;
   transition: transform .5s ease;
 }
 
 button:hover,
-button:focus {
+button:active {
   transform: scale(1.1);
+}
+
+@keyframes bg {
+  0% {
+    background: limegreen;
+  }
+
+  50% {
+    background: fuchsia;
+  }
+
+  100% {
+    background: limegreen;
+  }
+}
+
+li {
+  padding: .5rem;
 }
 
 .odd {

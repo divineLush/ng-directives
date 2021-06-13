@@ -1,16 +1,11 @@
 <div>
-  <button (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
-  <ul>
-    <li *ngFor="let number of numbers">
-      <span *ngIf="number % 2 === 0">{{ number }}</span>
-    </li>
-  </ul>
+  <button (click)="onlyOdd = !onlyOdd">Only show {{ onlyOdd ? 'even' : 'odd' }} numbers</button>
   <ul>
     <li *ngFor="let number of numbers">
       <span
         [ngClass]="{ odd: number % 2 !== 0 }"
-        [ngStyle]="{ background: number % 2 === 0 ? 'red' : 'blue' }"
-        *ngIf="onlyOdd ? number % 2 !== 0 : true"
+        [ngStyle]="{ color: number % 2 === 0 ? 'forestgreen' : 'lightpink' }"
+        *ngIf="onlyOdd ? number % 2 !== 0 : number % 2 === 0"
       >
         {{ number }}
       </span>
@@ -28,13 +23,11 @@
        Why does Angular need to know that it's a structural directive?
        Behind the scenes Angular will transform them into something else. -->
   <!-- This is what the * transforms to: -->
+  <p>Even numbers (using appUnless directive):</p>
   <ul>
     <li *ngFor="let number of numbers">
-      <ng-template [ngIf]="onlyOdd ? number % 2 !== 0 : true">
-        <span
-          [ngClass]="{ odd: number % 2 !== 0 }"
-          [ngStyle]="{ background: number % 2 === 0 ? 'red' : 'blue' }"
-        >
+      <ng-template [appUnless]="number % 2 !== 0">
+        <span>
           {{ number }}
         </span>
       </ng-template>
