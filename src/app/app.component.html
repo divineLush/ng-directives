@@ -33,4 +33,10 @@
       </ng-template>
     </li>
   </ul>
+  <button (click)="switchValue = switchValue === 'default' ? 'not-default' : 'default'">Toggle Switch Value</button>
+  <p>ngSwitch:</p>
+  <div [ngSwitch]="switchValue">
+    <p *ngSwitchCase="'default'">Value is default</p>
+    <p *ngSwitchCase="'not-default'">Value is not default</p>
+  </div>
 </div>

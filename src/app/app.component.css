@@ -6,6 +6,8 @@ button {
   padding: 1rem;
   color: #fff;
   border: 0;
+  border-radius: 30px;
+  padding: 1rem 2rem;
   background: limegreen;
   cursor: pointer;
   font-size: 3rem;
